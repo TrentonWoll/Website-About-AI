@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    max-width: 150px; 
+}
+/*make the logo responsive*/
+#logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+#header-text {
+    font-size: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+#mobile-menu-button {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+}
+/*styles for the bars in the mobile menu button */
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+#nav {
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row; 
+}
+
+#nav li {
+    margin: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#nav a:hover {
+    background-color: red;
+}
+
+p {
+	/* increase the line height to add space between lines add space at the bottom of each paragraph*/
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+
+
+ol {
+	/*align the list with the other sentences */
+    text-align: left; 
+    margin-left: 10px; 
+}
+
+ol li {
+	/* Add some space between list items */
+    margin-bottom: 20px; 
+    list-style-position: inside; 
+}
+
+/* for mobile menu */
+@media screen and (max-width: 768px) {
+    #header {
+        padding: 10px 0; 
+    }
+
+    #header-text {
+        font-size: 50px; 
+    }
+
+    #mobile-menu-button {
+        display: flex; 
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+}
+
+.centered {
+    text-align: center;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+/* for mobile */
+@media screen and (max-width: 768px) {
+    .centered {
+        padding: 10px; 
+    }
+
+    .responsive-image {
+        max-width: 100%; 
+    }
+}
+
+/* Larger Screens */
+@media screen and (min-width: 769px) {
+    .centered {
+        max-width: 50%; 
+    }
+    
+    .responsive-image {
+        max-width: 100%; 
+        display: block; 
+        margin: 0 auto; 
+    }
+}
+
+
+/* Styles for dark mode */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+#header.dark-mode {
+    background-color: #111;
+    color: white;
+}
+
+#nav.dark-mode {
+    background-color: #222;
+}
+
+.nav-links.dark-mode {
+    background-color: #222;
+}
+
+#nav a.dark-mode {
+    color: white;
+}
+
+#nav a.dark-mode:hover {
+    background-color: red;
+}
+
+p.dark-mode {
+    color: white;
+}
+
+ol.dark-mode {
+    color: white;
+}
+
+li.dark-mode {
+    color: white;
+}

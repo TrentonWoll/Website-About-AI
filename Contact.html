@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" type="text/css" href="Contact.css">
+</head>
+<body>
+    <header id="header">
+        <div id="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div id="header-text">Contact</div>
+        <div id="mobile-menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+    <nav id="nav">
+        <ul class="nav-links">
+            <li><a href="AI.html">Home</a></li>
+            <li><a href="ChatGPT.html">ChatGPT</a></li>
+            <li><a href="Others.html">Other AI</a></li>
+            <li><a href="Contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+    
+    <div id="dark-mode-toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+        </label>
+        <span id="dark-mode-label">Dark Mode</span>
+    </div>
+    
+    <div class="centered">
+        <form action="submit.php" method="POST">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="firstname" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="lastname" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Enter today's date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label>Was this information helpful?</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" id="yes" name="helpful" value="Yes" required>
+                    Yes
+                </label>
+                <label class="radio-label">
+                    <input type="radio" id="no" name="helpful" value="No" required>
+                    No
+                </label>
+            </div>
+
+            <label for="feedback">Tell us what you think:</label>
+            <style>
+                textarea#feedback {
+                    width: 350px;
+                }
+            </style>
+            <textarea id="feedback" name="feedback" rows="10" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="AI.js"></script>
+	<script src="form.js"></script>
+</body>
+</html>
